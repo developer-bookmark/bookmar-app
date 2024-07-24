@@ -1,5 +1,5 @@
 import 'package:bookmarking_app/Features/Widgets/bookmark_card.dart';
-import 'package:bookmarking_app/Features/Widgets/chip_button.dart';
+import 'package:bookmarking_app/Features/Widgets/topic_section.dart';
 import 'package:flutter/cupertino.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -10,21 +10,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var chipTexts = ['Artificial Intelligence', 'Art', 'Music', 'Business'];
-  var chipTexts2 = ['Collection', 'Internet', 'Technology', 'Reading'];
-  var chipTexts3 = ['History', 'Pop Culture', 'Hobby', 'Development'];
-
-  void _onPress() {
-    print('Chip Button Pressed');
-  }
-
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       child: CustomScrollView(
         slivers: <Widget>[
           const CupertinoSliverNavigationBar(
-            largeTitle: Text("Your Bookmark"),
+            backgroundColor: CupertinoColors.white,
+            largeTitle: Text(
+              "Your Bookmark",
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
           ),
           SliverToBoxAdapter(
             child: Container(
@@ -33,54 +32,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
               child: Column(
                 children: [
-                  SizedBox(
-                    height: 40,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: chipTexts.length,
-                      itemBuilder: (ctx, idx) {
-                        return ChipButton(
-                          label: chipTexts[idx],
-                          onPressed: _onPress,
-                        );
-                      },
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  SizedBox(
-                    height: 40,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: chipTexts2.length,
-                      itemBuilder: (ctx, idx) {
-                        return ChipButton(
-                          label: chipTexts2[idx],
-                          onPressed: _onPress,
-                        );
-                      },
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  SizedBox(
-                    height: 40,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: chipTexts3.length,
-                      itemBuilder: (ctx, idx) {
-                        return ChipButton(
-                          label: chipTexts3[idx],
-                          onPressed: _onPress,
-                        );
-                      },
-                    ),
-                  ),
+                  const TopicSection(),
                   const SizedBox(height: 32.0),
                   Column(
                     children: [
                       BookmarkCard(
-                        topic: "Artificial Intelligence",
+                        topic: "Crypto",
                         title:
-                            "How AI Can Change the Way Your Company Gets Work Done",
+                            "After a 10-Year Wait, Mt. Gox Bitcoin Is Finally Being Returned",
                         thumbnail: "",
                         createdAt: DateTime.now(),
                         readingLength: 6,
@@ -92,16 +51,16 @@ class _MyHomePageState extends State<MyHomePage> {
                             "How AI Can Change the Way Your Company Gets Work Done",
                         thumbnail: "",
                         createdAt: DateTime.now(),
-                        readingLength: 6,
+                        readingLength: 4,
                         onPressed: () {},
                       ),
                       BookmarkCard(
-                        topic: "Artificial Intelligence",
+                        topic: "Technology",
                         title:
-                            "How AI Can Change the Way Your Company Gets Work Done",
+                            "How to protect yourself from iPhone thieves locking you out of your own device",
                         thumbnail: "",
                         createdAt: DateTime.now(),
-                        readingLength: 6,
+                        readingLength: 3,
                         onPressed: () {},
                       ),
                     ],
