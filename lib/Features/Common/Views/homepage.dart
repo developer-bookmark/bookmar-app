@@ -1,4 +1,4 @@
-import 'package:bookmarking_app/Features/widgets/chip_button.dart';
+import 'package:bookmarking_app/Features/Widgets/chip_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
