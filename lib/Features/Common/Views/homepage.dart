@@ -1,6 +1,6 @@
+import 'package:bookmarking_app/Features/Widgets/bookmark_card.dart';
 import 'package:bookmarking_app/Features/Widgets/chip_button.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -82,6 +82,38 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                     ),
                   ),
+                  const SizedBox(height: 32.0),
+                  Column(
+                    children: [
+                      BookmarkCard(
+                        topic: "Artificial Intelligence",
+                        title:
+                            "How AI Can Change the Way Your Company Gets Work Done",
+                        thumbnail: "",
+                        createdAt: DateTime.now(),
+                        readingLength: 6,
+                        onPressed: () {},
+                      ),
+                      BookmarkCard(
+                        topic: "Artificial Intelligence",
+                        title:
+                            "How AI Can Change the Way Your Company Gets Work Done",
+                        thumbnail: "",
+                        createdAt: DateTime.now(),
+                        readingLength: 6,
+                        onPressed: () {},
+                      ),
+                      BookmarkCard(
+                        topic: "Artificial Intelligence",
+                        title:
+                            "How AI Can Change the Way Your Company Gets Work Done",
+                        thumbnail: "",
+                        createdAt: DateTime.now(),
+                        readingLength: 6,
+                        onPressed: () {},
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
