@@ -14,7 +14,7 @@ class ChipButton extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color(0x00f2f2f2),
         borderRadius: BorderRadius.circular(20.0),
-        border: Border.all(color: CupertinoColors.systemGrey4),
+        border: Border.all(color: CupertinoColors.systemGrey6),
       ),
       child: CupertinoButton(
         padding: EdgeInsets.zero,

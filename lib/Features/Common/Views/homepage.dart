@@ -27,7 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
             largeTitle: Text("Your Bookmark"),
           ),
           SliverToBoxAdapter(
-            child: Padding(
+            child: Container(
+              margin: const EdgeInsets.symmetric(vertical: 16.0),
               padding:
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
               child: Column(
@@ -38,12 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       scrollDirection: Axis.horizontal,
                       itemCount: chipTexts.length,
                       itemBuilder: (ctx, idx) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: ChipButton(
-                            label: chipTexts[idx],
-                            onPressed: _onPress,
-                          ),
+                        return ChipButton(
+                          label: chipTexts[idx],
+                          onPressed: _onPress,
                         );
                       },
                     ),
@@ -55,12 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       scrollDirection: Axis.horizontal,
                       itemCount: chipTexts2.length,
                       itemBuilder: (ctx, idx) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: ChipButton(
-                            label: chipTexts2[idx],
-                            onPressed: _onPress,
-                          ),
+                        return ChipButton(
+                          label: chipTexts2[idx],
+                          onPressed: _onPress,
                         );
                       },
                     ),
@@ -72,12 +67,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       scrollDirection: Axis.horizontal,
                       itemCount: chipTexts3.length,
                       itemBuilder: (ctx, idx) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: ChipButton(
-                            label: chipTexts3[idx],
-                            onPressed: _onPress,
-                          ),
+                        return ChipButton(
+                          label: chipTexts3[idx],
+                          onPressed: _onPress,
                         );
                       },
                     ),

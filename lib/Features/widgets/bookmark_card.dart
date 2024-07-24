@@ -55,7 +55,7 @@ class BookmarkCard extends StatelessWidget {
                         const Icon(
                           CupertinoIcons.tag,
                           size: 16,
-                          color: CupertinoColors.systemGrey,
+                          color: CupertinoColors.black,
                         ),
                         const SizedBox(width: 5),
                         Text(
