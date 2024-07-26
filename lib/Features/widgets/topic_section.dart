@@ -1,3 +1,4 @@
+import 'package:bookmarking_app/Features/Models/topic.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:bookmarking_app/Features/Widgets/chip_button.dart';
 
@@ -6,9 +7,26 @@ class TopicSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var chipTexts = ['Artificial Intelligence', 'Art', 'Music', 'Business'];
-    var chipTexts2 = ['Collection', 'Internet', 'Technology', 'Reading'];
-    var chipTexts3 = ['History', 'Pop Culture', 'Hobby', 'Development'];
+    List<Topic> firstTopics = [
+      Topic(title: 'Artificial Intelligence'),
+      Topic(title: 'Art'),
+      Topic(title: 'Music'),
+      Topic(title: 'Reading'),
+    ];
+
+    List<Topic> secondTopics = [
+      Topic(title: 'Bussiness'),
+      Topic(title: 'Collection'),
+      Topic(title: 'Internet'),
+      Topic(title: 'Technology'),
+    ];
+
+    List<Topic> thirdTopics = [
+      Topic(title: 'History'),
+      Topic(title: 'Pop Culture'),
+      Topic(title: 'Hobby'),
+      Topic(title: 'Development'),
+    ];
 
     void onPress() {
       print('Chip Button Pressed');
@@ -19,10 +37,10 @@ class TopicSection extends StatelessWidget {
         height: 40,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: chipTexts.length,
+          itemCount: firstTopics.length,
           itemBuilder: (ctx, idx) {
             return ChipButton(
-              label: chipTexts[idx],
+              label: firstTopics[idx].title,
               onPressed: onPress,
             );
           },
@@ -33,10 +51,10 @@ class TopicSection extends StatelessWidget {
         height: 40,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: chipTexts2.length,
+          itemCount: secondTopics.length,
           itemBuilder: (ctx, idx) {
             return ChipButton(
-              label: chipTexts2[idx],
+              label: secondTopics[idx].title,
               onPressed: onPress,
             );
           },
@@ -47,10 +65,10 @@ class TopicSection extends StatelessWidget {
         height: 40,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: chipTexts3.length,
+          itemCount: thirdTopics.length,
           itemBuilder: (ctx, idx) {
             return ChipButton(
-              label: chipTexts3[idx],
+              label: thirdTopics[idx].title,
               onPressed: onPress,
             );
           },
