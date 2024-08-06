@@ -115,9 +115,9 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget searchWidget(BuildContext context) {
+  Widget searchWidget(Double height) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.2,
+      height: height,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
