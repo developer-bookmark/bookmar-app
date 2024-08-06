@@ -91,32 +91,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         const TopicSection(),
                         const SizedBox(height: 32.0),
                         Column(
-                          children: [
-                            BookmarkCard(
-                              topic: bookmarks[0].topic,
-                              title: bookmarks[0].title,
-                              thumbnail: bookmarks[0].thumbnail,
-                              createdAt: bookmarks[0].createdAt,
-                              readingLength: bookmarks[0].readingLength,
-                              onPressed: () {},
-                            ),
-                            BookmarkCard(
-                              topic: bookmarks[1].topic,
-                              title: bookmarks[1].title,
-                              thumbnail: bookmarks[1].thumbnail,
-                              createdAt: bookmarks[1].createdAt,
-                              readingLength: bookmarks[1].readingLength,
-                              onPressed: () {},
-                            ),
-                            BookmarkCard(
-                              topic: bookmarks[2].topic,
-                              title: bookmarks[2].title,
-                              thumbnail: bookmarks[2].thumbnail,
-                              createdAt: bookmarks[2].createdAt,
-                              readingLength: bookmarks[2].readingLength,
-                              onPressed: () {},
-                            ),
-                          ],
+                          children: bookmarks.map( 
+                          (bookmark) => BookmarkCard( 
+                          topic: bookmark.topic,
+                          title: bookmark.title,
+                          thumbnail: bookmark.thumbnail,
+                          createdAt: bookmark.createdAt,
+                          readingLength: bookmark.readingLength,
+                          onPressed: () {}
+                          )
+                          ).toList()
                         )
                       ],
                     ),
